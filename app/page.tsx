@@ -1,103 +1,124 @@
-import Image from "next/image";
+"use client";
+import { About } from "@/components/About";
+import { CaseStudy } from "@/components/CaseStudy";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { Portfolio } from "@/components/Portfolio";
+import { Services } from "@/components/Services";
+import { Skills } from "@/components/Skills";
+import { Testimonials } from "@/components/Testimonials";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { WorkProcess } from "@/components/WorkProcess";
+import { useState } from "react";
+
+const sampleProject = {
+  id: 1,
+  title: "FinanceFlow",
+  subtitle: "Banking Application Redesign",
+  description: "Complete redesign of a mobile banking application focusing on user onboarding and transaction flows. Increased user engagement by 45% through intuitive design and improved accessibility.",
+  image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+  tags: ["Mobile App", "Fintech", "User Research", "Accessibility"],
+  year: "2024",
+  client: "FinanceFlow Inc.",
+  duration: "3 months",
+  timeline: "Jan 2024 - Mar 2024",
+  role: "Lead Designer",
+  metrics: [
+    { label: "User Engagement", value: "+45%" },
+    { label: "Task Completion", value: "+60%" },
+    { label: "App Store Rating", value: "4.8/5" }
+  ],
+  problemStatement: "Describe the main problem addressed by the project.",
+  objectives: [
+    "Increase user engagement",
+    "Improve accessibility"
+  ],
+  process: [
+    "Research",
+    "Ideation",
+    "Design",
+    "Testing",
+    "Launch"
+  ],
+  researchMethods: [
+    "User Interviews",
+    "Surveys"
+  ],
+  keyFindings: [
+    "Users prefer simplicity",
+    "Mobile usage is high"
+  ],
+  personas: [
+    {
+      name: "Jane Doe",
+      description: "A busy professional",
+      needs: ["Quick access", "Mobile friendly"]
+    }
+  ],
+  challenges: [
+    {
+      challenge: "Low engagement",
+      solution: "Redesigned onboarding"
+    }
+  ],
+  features: [
+    "Dark mode",
+    "Notifications"
+  ],
+  designShowcase: [
+    {
+      title: "Homepage Redesign",
+      description: "A modern, clean homepage.",
+      image: "/path/to/showcase.jpg"
+    }
+  ],
+  reflection: {
+    keyTakeaways: [
+      "Iterative design is key"
+    ],
+    futureImprovements: [
+      "Add more personalization"
+    ]
+  }
+};
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [currentView, setCurrentView] = useState<'portfolio' | 'case-study'>('portfolio');
+  const [selectedProject, setSelectedProject] = useState(sampleProject);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+  const showCaseStudy = (project: typeof sampleProject) => {
+    setSelectedProject(project);
+    setCurrentView('case-study');
+    window.scrollTo(0, 0);
+  };
+
+  const showPortfolio = () => {
+    setCurrentView('portfolio');
+  };
+
+  if (currentView === 'case-study') {
+    return (
+      <CaseStudy onBack={showPortfolio} project={selectedProject} />
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-background">
+      <ThemeToggle />
+      <Header />
+      <main>
+        <Hero />
+        <About />
+        <Services />
+        <WorkProcess />
+        <Portfolio onViewCaseStudy={showCaseStudy} />
+        <Skills />
+        <Testimonials />
+        <Contact />
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }
