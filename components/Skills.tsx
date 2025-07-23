@@ -1,4 +1,4 @@
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ImageWithFallback } from "./ImageWithFallback";
 import { Card, CardContent } from "./ui/card";
 import { Progress } from "./ui/progress";
 

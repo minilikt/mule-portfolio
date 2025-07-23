@@ -175,7 +175,7 @@ export function Services() {
 
                   {/* Features Preview */}
                   <div className="mb-6">
-                    <h4 className="text-sm mb-3 text-muted-foreground">What's Included:</h4>
+                    <h4 className="text-sm mb-3 text-muted-foreground">What&s Included:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature) => (
                         <li key={feature} className="flex items-center text-sm">
@@ -211,7 +211,7 @@ export function Services() {
           <Card className="inline-block p-8 bg-gradient-to-r from-primary/5 to-accent/10">
             <h3 className="text-xl mb-4">Need a Custom Solution?</h3>
             <p className="text-muted-foreground mb-6 max-w-md">
-              Every project is unique. Let's discuss your specific needs and create a tailored proposal that fits your budget and timeline.
+              Every project is unique. Let&apos;s discuss your specific needs and create a tailored proposal that fits your budget and timeline.
             </p>
             <Button size="lg">
               Get Custom Quote

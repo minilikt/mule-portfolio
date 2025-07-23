@@ -35,11 +35,11 @@ ${message}
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            Let's Work Together
+            Let&apos;s Work Together
           </Badge>
           <h2 className="text-3xl sm:text-4xl mb-4">Get In Touch</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Let's discuss how we can bring your vision to life.
+            Have a project in mind? I&apos;d love to hear about it. Let&apos;s discuss how we can bring your vision to life.
           </p>
         </div>
         

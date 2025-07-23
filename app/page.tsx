@@ -11,78 +11,10 @@ import { Skills } from "@/components/Skills";
 import { Testimonials } from "@/components/Testimonials";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { WorkProcess } from "@/components/WorkProcess";
+import { sampleProject } from "@/constants/const";
 import { useState } from "react";
 
-const sampleProject = {
-  id: 1,
-  title: "FinanceFlow",
-  subtitle: "Banking Application Redesign",
-  description: "Complete redesign of a mobile banking application focusing on user onboarding and transaction flows. Increased user engagement by 45% through intuitive design and improved accessibility.",
-  image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-  tags: ["Mobile App", "Fintech", "User Research", "Accessibility"],
-  year: "2024",
-  client: "FinanceFlow Inc.",
-  duration: "3 months",
-  timeline: "Jan 2024 - Mar 2024",
-  role: "Lead Designer",
-  metrics: [
-    { label: "User Engagement", value: "+45%" },
-    { label: "Task Completion", value: "+60%" },
-    { label: "App Store Rating", value: "4.8/5" }
-  ],
-  problemStatement: "Describe the main problem addressed by the project.",
-  objectives: [
-    "Increase user engagement",
-    "Improve accessibility"
-  ],
-  process: [
-    "Research",
-    "Ideation",
-    "Design",
-    "Testing",
-    "Launch"
-  ],
-  researchMethods: [
-    "User Interviews",
-    "Surveys"
-  ],
-  keyFindings: [
-    "Users prefer simplicity",
-    "Mobile usage is high"
-  ],
-  personas: [
-    {
-      name: "Jane Doe",
-      description: "A busy professional",
-      needs: ["Quick access", "Mobile friendly"]
-    }
-  ],
-  challenges: [
-    {
-      challenge: "Low engagement",
-      solution: "Redesigned onboarding"
-    }
-  ],
-  features: [
-    "Dark mode",
-    "Notifications"
-  ],
-  designShowcase: [
-    {
-      title: "Homepage Redesign",
-      description: "A modern, clean homepage.",
-      image: "/path/to/showcase.jpg"
-    }
-  ],
-  reflection: {
-    keyTakeaways: [
-      "Iterative design is key"
-    ],
-    futureImprovements: [
-      "Add more personalization"
-    ]
-  }
-};
+
 
 export default function Home() {
   const [currentView, setCurrentView] = useState<'portfolio' | 'case-study'>('portfolio');

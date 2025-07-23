@@ -13,7 +13,7 @@ export function Footer() {
             <h3 className="text-xl mb-4">Abraham Mulugeta</h3>
             <p className="text-muted-foreground mb-4 max-w-md">
               Creating meaningful digital experiences through thoughtful design and user research. 
-              Let's build something amazing together.
+              Let&s build something amazing together.
             </p>
             <Button>Start a Project</Button>
           </div>

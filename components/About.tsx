@@ -1,4 +1,3 @@
-import profileImage from "figma:asset/0fd52c9e11bc502d72b7c41fe55b4173e89699ac.png";
 import { Card } from "./ui/card";
 import Image from "next/image";
 
@@ -19,12 +18,12 @@ export function About() {
                 principles to deliver solutions that drive business results.
               </p>
               <p>
-                I've had the privilege of working with startups and established companies 
+                I&apos;ve had the privilege of working with startups and established companies 
                 across various industries, from fintech to healthcare, helping them transform 
                 complex problems into simple, elegant solutions.
               </p>
               <p>
-                When I'm not designing, you can find me exploring the latest design trends, 
+                When I&apos;m not designing, you can find me exploring the latest design trends, 
                 contributing to open-source projects, or exploring the beautiful landscapes of Ethiopia.
               </p>
             </div>

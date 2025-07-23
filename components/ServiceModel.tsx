@@ -26,8 +26,9 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
         <DialogHeader>
           <DialogTitle className="text-2xl mb-4">{service.title}</DialogTitle>
           <DialogDescription>
-            Comprehensive details about this service including what's included, process overview, timeline, and expected outcomes.
+            Comprehensive details about this service including what&apos;s included, process overview, timeline, and expected outcomes.
           </DialogDescription>
+
         </DialogHeader>
         
         <div className="space-y-8">
@@ -43,7 +44,7 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
             <div>
               <h3 className="text-lg mb-4 flex items-center">
                 <CheckCircle className="h-5 w-5 text-green-500 mr-2" />
-                What's Included
+                What&apos;s Included
               </h3>
               <ul className="space-y-2">
                 {service.features.map((feature, index) => (

@@ -1,8 +1,8 @@
 
 import { ArrowLeft, ExternalLink, Calendar, Users, Target, TrendingUp, CheckCircle, ArrowRight, Clock, Lightbulb, Zap, Eye, Heart } from "lucide-react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ImageWithFallback } from "./ImageWithFallback";
 import { Button } from "./ui/button";
-import { Card, CardContent } from "./ui/card";
+import { Card } from "./ui/card";
 import { Badge } from "./ui/badge";
 
 interface CaseStudyProps {
@@ -393,7 +393,7 @@ export function CaseStudy({ onBack, project }: CaseStudyProps) {
           <Card className="p-12 bg-gradient-to-r from-primary/5 to-accent/10">
             <h3 className="text-2xl mb-4">Like what you see?</h3>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Let's collaborate to create meaningful digital experiences that solve real problems and delight users.
+              Let&s collaborate to create meaningful digital experiences that solve real problems and delight users.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg">
