@@ -29,26 +29,37 @@ export default function Home() {
     setCurrentView('case-study');
     window.scrollTo(0, 0);
   };
+  const [backTarget, setBackTarget] = useState<'back' | 'contact'>('back');
 
   const showPortfolio = () => {
     setCurrentView('portfolio');
+    setBackTarget('back');
     console.log("Portfolio view activated");
   };
 
+  const showContact = () => {
+    setCurrentView('portfolio');
+    setBackTarget('contact');
+    console.log("Contact view activated");
+  };
 
-useEffect(() => {
-  if (currentView === 'portfolio') {
-    const timeout = setTimeout(() => {
-      scrollToSection('work');
-    }, 100); 
+  useEffect(() => {
+    if (currentView === 'portfolio') {
+      const timeout = setTimeout(() => {
+        if (backTarget === "back") {
+          scrollToSection('work');
+        } else {
+          scrollToSection('contact');
+        }
+      }, 100);
 
-    return () => clearTimeout(timeout);
-  }
-}, [currentView]);
+      return () => clearTimeout(timeout);
+    }
+  }, [currentView, backTarget]);
 
   if (currentView === 'case-study') {
     return (
-      <CaseStudy onBack={showPortfolio} project={selectedProject} />
+      <CaseStudy onBack={showPortfolio} contact={showContact} project={selectedProject} />
     );
   }
 

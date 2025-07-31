@@ -7,6 +7,7 @@ import { Badge } from "./ui/badge";
 
 interface CaseStudyProps {
   onBack: () => void;
+  contact: () => void;
   project: {
     id: number;
     title: string;
@@ -43,7 +44,7 @@ interface CaseStudyProps {
   };
 }
 
-export function CaseStudy({ onBack, project }: CaseStudyProps) {
+export function CaseStudy({ onBack, project, contact }: CaseStudyProps) {
   return (
     <div className="min-h-screen bg-background pt-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -398,7 +399,7 @@ export function CaseStudy({ onBack, project }: CaseStudyProps) {
               Let&s collaborate to create meaningful digital experiences that solve real problems and delight users.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={onBack} size="lg">
+              <Button onClick={contact} size="lg">
                 Start a Project
               </Button>
               {project.liveUrl && (
