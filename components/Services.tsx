@@ -1,10 +1,24 @@
-import { Monitor, Smartphone, Layers, Zap, Users, BarChart } from "lucide-react";
-import { ServiceModal } from "./ServiceModel";
+import { Monitor, Smartphone, Layers, Zap, CheckCircle, Clock, Users, Target, BarChart } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "./ui/dialog";
+import { ServiceModal } from "./ServiceModel";
 
+interface ServiceModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  service: {
+    title: string;
+    description: string;
+    features: string[];
+    process: string[];
+    timeline: string;
+    idealFor: string[];
+    outcomes: string[];
+  } | null;
+}
 const servicesData = [
   {
     id: 1,
@@ -158,7 +172,8 @@ export function Services() {
           {servicesData.map((service) => {
             const Icon = service.icon;
             return (
-              <Card key={service.id} className="group hover:shadow-lg transition-all duration-300 h-full">
+              <Card onMouseDown={() => handleLearnMore(service)} key={service.id} className="group hover:shadow-lg transition-all duration-300 h-full">
+                
                 <CardContent className="p-6 flex flex-col h-full">
                   {/* Icon */}
                   <div className="mb-4">

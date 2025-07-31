@@ -1,3 +1,5 @@
+import { Users, Search, Palette, Rocket } from "lucide-react";
+
 export const testimonials = [
   {
     id: 1,
@@ -66,7 +68,7 @@ export const projects = [
     title: "Habeshlingo",
     subtitle: "African Language Learning App",
     description: "A gamified mobile app that makes indigenous African languages accessible through levels, points, and streaks—bringing cultural heritage to the digital age.",
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
+    image: "/port/Habesh_cover.png",
     tags: ["Mobile App", "EdTech", "Gamification", "Cultural Preservation"],
     year: "2025",
     client: "Habeshlingo Inc.",
@@ -132,12 +134,12 @@ export const projects = [
       {
         title: "Onboarding Experience",
         description: "Culturally-rich introduction that celebrates African heritage",
-        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop"
+        image: "/port/Habesh_onboarding.png"
       },
       {
         title: "Learning Interface",
         description: "Gamified lessons with traditional African design patterns",
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=600&fit=crop"
+        image: "/port/Habesh_nav.png"
       }
     ],
     reflection: {
@@ -159,7 +161,7 @@ export const projects = [
     title: "Aelafat Zemare",
     subtitle: "Ethiopian Orthodox Hymn Streaming",
     description: "The first digital platform dedicated to preserving and sharing Ethiopian Orthodox hymns, connecting young believers with their spiritual heritage through sacred music.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop",
+    image: "/Ejat_cover.png", 
     tags: ["Mobile App", "Spirituality", "Cultural Heritage", "Audio Streaming"],
     year: "2024",
     client: "Ethiopian Orthodox Tewahedo Church",
@@ -225,12 +227,12 @@ export const projects = [
       {
         title: "Sacred Interface Design",
         description: "Minimal, reverent design reflecting Orthodox spiritual aesthetics",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&h=600&fit=crop"
+        image: "/port/Ejat_onboarding.png"
       },
       {
         title: "Liturgical Navigation",
         description: "Calendar-based discovery system for seasonal hymns",
-        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=800&h=600&fit=crop"
+        image: "/port/Ejat_nav.png"
       }
     ],
     reflection: {
@@ -252,7 +254,7 @@ export const projects = [
     title: "FlexET",
     subtitle: "AI-Powered Fitness Platform",
     description: "A futuristic fitness app that leverages AI to create personalized workout and nutrition plans, adapting to user mood, schedule, and fitness goals in real-time.",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop",
+    image: "/port/FlexET_cover.png",
     tags: ["Mobile App", "AI/ML", "Health & Fitness", "Personalization"],
     year: "2025",
     client: "FlexET Technologies",
@@ -329,12 +331,12 @@ export const projects = [
       {
         title: "AI Coach Interface",
         description: "Conversational AI that adapts to user needs and preferences",
-        image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop"
+        image: "/port/FlexET_Onboarding.png"
       },
       {
         title: "Smart Workout Flow",
         description: "Adaptive exercises that change based on real-time feedback",
-        image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?w=800&h=600&fit=crop"
+        image: "/port/FlexET_nav.png"
       }
     ],
     reflection: {
@@ -355,7 +357,7 @@ export const projects = [
     title: "HabariDOC",
     subtitle: "Comprehensive Healthcare Platform",
     description: "A medical platform bridging doctors and patients through seamless appointment scheduling, live consultations, and comprehensive health record management for improved healthcare accessibility.",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=800&h=600&fit=crop",
+    image: "/port/Doc_cover.png",
     tags: ["Web App", "Healthcare", "Telemedicine", "Accessibility"],
     year: "2025",
     client: "Ethiopian Ministry of Health",
@@ -526,3 +528,38 @@ export const sampleProject = {
     ]
   }
 };
+
+export const processSteps = [
+  {
+    id: 1,
+    title: "Discovery & Introduction",
+    description: "We start by understanding your business goals, target audience, and project requirements through comprehensive stakeholder interviews.",
+    icon: Users,
+    duration: "1-2 weeks",
+    deliverables: ["Project Brief", "Stakeholder Interviews", "Requirements Document"]
+  },
+  {
+    id: 2,
+    title: "UX Research",
+    description: "Deep dive into user behavior, market analysis, and competitive research to inform design decisions with data-driven insights.",
+    icon: Search,
+    duration: "2-3 weeks",
+    deliverables: ["User Personas", "Journey Maps", "Competitive Analysis", "User Testing"]
+  },
+  {
+    id: 3,
+    title: "UI Design",
+    description: "Create beautiful, functional interfaces with wireframes, prototypes, and high-fidelity designs that bring your vision to life.",
+    icon: Palette,
+    duration: "3-4 weeks",
+    deliverables: ["Wireframes", "Design System", "High-fidelity Mockups", "Interactive Prototypes"]
+  },
+  {
+    id: 4,
+    title: "Delivery & Launch",
+    description: "Handoff all design assets, documentation, and provide ongoing support to ensure seamless implementation and launch.",
+    icon: Rocket,
+    duration: "1 week",
+    deliverables: ["Design Handoff", "Documentation", "Asset Library", "Launch Support"]
+  }
+];

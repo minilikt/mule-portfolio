@@ -20,6 +20,10 @@ export default function Home() {
   const [currentView, setCurrentView] = useState<'portfolio' | 'case-study'>('portfolio');
   const [selectedProject, setSelectedProject] = useState(sampleProject);
 
+  const scrollToSection = (sectionId: string): void => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
   const showCaseStudy = (project: typeof sampleProject) => {
     setSelectedProject(project);
     setCurrentView('case-study');
@@ -28,7 +32,10 @@ export default function Home() {
 
   const showPortfolio = () => {
     setCurrentView('portfolio');
+    scrollToSection('work');
+
   };
+
 
   if (currentView === 'case-study') {
     return (

@@ -41,18 +41,7 @@ export function About() {
               </Image>
             </Card>
             
-            {/* Floating Achievement Cards */}
-            <div className="absolute -top-4 -right-4 bg-background border border-border rounded-lg p-4 shadow-lg">
-              <div className="text-2xl">🏆</div>
-              <div className="text-sm">Design Award</div>
-              <div className="text-xs text-muted-foreground">2024</div>
-            </div>
             
-            <div className="absolute -bottom-4 -left-4 bg-background border border-border rounded-lg p-4 shadow-lg">
-              <div className="text-2xl">⭐</div>
-              <div className="text-sm">5.0 Rating</div>
-              <div className="text-xs text-muted-foreground">Upwork</div>
-            </div>
           </div>
         </div>
       </div>

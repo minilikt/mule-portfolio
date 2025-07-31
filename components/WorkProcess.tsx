@@ -1,41 +1,8 @@
-import { Users, Search, Palette, Rocket } from "lucide-react";
+import { processSteps } from "@/constants/const";
 import { Badge } from "./ui/badge";
 import { Card, CardContent } from "./ui/card";
 
-const processSteps = [
-  {
-    id: 1,
-    title: "Discovery & Introduction",
-    description: "We start by understanding your business goals, target audience, and project requirements through comprehensive stakeholder interviews.",
-    icon: Users,
-    duration: "1-2 weeks",
-    deliverables: ["Project Brief", "Stakeholder Interviews", "Requirements Document"]
-  },
-  {
-    id: 2,
-    title: "UX Research",
-    description: "Deep dive into user behavior, market analysis, and competitive research to inform design decisions with data-driven insights.",
-    icon: Search,
-    duration: "2-3 weeks",
-    deliverables: ["User Personas", "Journey Maps", "Competitive Analysis", "User Testing"]
-  },
-  {
-    id: 3,
-    title: "UI Design",
-    description: "Create beautiful, functional interfaces with wireframes, prototypes, and high-fidelity designs that bring your vision to life.",
-    icon: Palette,
-    duration: "3-4 weeks",
-    deliverables: ["Wireframes", "Design System", "High-fidelity Mockups", "Interactive Prototypes"]
-  },
-  {
-    id: 4,
-    title: "Delivery & Launch",
-    description: "Handoff all design assets, documentation, and provide ongoing support to ensure seamless implementation and launch.",
-    icon: Rocket,
-    duration: "1 week",
-    deliverables: ["Design Handoff", "Documentation", "Asset Library", "Launch Support"]
-  }
-];
+
 
 export function WorkProcess() {
   return (

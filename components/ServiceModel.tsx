@@ -17,6 +17,10 @@ interface ServiceModalProps {
   } | null;
 }
 
+const scrollToSection = (sectionId: string): void => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
 export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
   if (!service) return null;
 
@@ -119,10 +123,20 @@ export function ServiceModal({ isOpen, onClose, service }: ServiceModalProps) {
           {/* CTA */}
           <div className="border-t pt-6">
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="flex-1">
+                <Button
+                onClick={() => {
+                  scrollToSection('contact');
+                  onClose();
+                }}
+                size="lg"
+                className="flex-1"
+                >
                 Start This Project
-              </Button>
-              <Button variant="outline" size="lg" className="flex-1">
+                </Button>
+              <Button onClick={() => {
+                  scrollToSection('contact');
+                  onClose();
+                }} variant="outline" size="lg" className="flex-1">
                 Schedule Consultation
               </Button>
             </div>

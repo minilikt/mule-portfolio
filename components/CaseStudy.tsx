@@ -76,10 +76,13 @@ export function CaseStudy({ onBack, project }: CaseStudyProps) {
         <div className="mb-16">
           <div className="aspect-video rounded-xl overflow-hidden shadow-2xl">
             <ImageWithFallback
+              height={48}
+              width={1920}  
               src={project.image}
               alt={project.title}
               className="w-full h-full object-cover"
             />
+            <p className="text-sm text-muted-foreground">htasdghnasdbg</p>
           </div>
         </div>
 
@@ -311,6 +314,8 @@ export function CaseStudy({ onBack, project }: CaseStudyProps) {
                 <div className="relative group">
                   <div className="aspect-video rounded-xl overflow-hidden shadow-lg">
                     <ImageWithFallback
+                      height={1471}
+                      width={1920}
                       src={showcase.image}
                       alt={showcase.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

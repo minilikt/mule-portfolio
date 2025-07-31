@@ -115,6 +115,8 @@ export function Skills() {
                       <div className="flex items-center space-x-3">
                         <div className="w-8 h-8 rounded-lg bg-background border border-border flex items-center justify-center">
                           <ImageWithFallback
+                            width={32}
+                            height={32}
                             src={tool.logo}
                             alt={tool.name}
                             className="w-6 h-6"
@@ -163,6 +165,8 @@ export function Skills() {
                         src={tech.logo}
                         alt={tech.name}
                         className="w-8 h-8"
+                        width={32}
+                        height={32}
                       />
                     </div>
                     <span className="text-xs text-center">{tech.name}</span>
@@ -183,6 +187,8 @@ export function Skills() {
                       <ImageWithFallback
                         src={platform.logo}
                         alt={platform.name}
+                        width={32}
+                        height={32}
                         className="w-8 h-8"
                       />
                     </div>

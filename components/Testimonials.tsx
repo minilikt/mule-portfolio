@@ -48,6 +48,8 @@ export function Testimonials() {
                 {/* Client Info */}
                 <div className="flex items-center">
                   <ImageWithFallback
+                    width={48}
+                    height={48}
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full mr-4"

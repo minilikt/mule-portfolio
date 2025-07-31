@@ -38,7 +38,7 @@ export function Portfolio({ onViewCaseStudy }: PortfolioProps) {
               className={`overflow-hidden group hover:shadow-xl transition-all duration-500 ${
                 selectedProject === project.id ? "ring-2 ring-primary" : ""
               }`}
-              onMouseEnter={() => setSelectedProject(project.id)}
+              onMouseDown={() => { setSelectedProject(project.id); handleViewCaseStudy(project); }}
               onMouseLeave={() => setSelectedProject(null)}
             >
               <div className={`grid lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
@@ -46,6 +46,8 @@ export function Portfolio({ onViewCaseStudy }: PortfolioProps) {
                 <div className={`relative overflow-hidden ${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
                   <div className="aspect-[4/3] lg:aspect-auto lg:h-full">
                     <ImageWithFallback
+                      width={1200}
+                      height={1200}
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
