@@ -12,7 +12,7 @@ import { Testimonials } from "@/components/Testimonials";
 import { ThemeToggle } from "@/components/ThemeToggle";
 import { WorkProcess } from "@/components/WorkProcess";
 import { sampleProject } from "@/constants/const";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 
@@ -32,10 +32,19 @@ export default function Home() {
 
   const showPortfolio = () => {
     setCurrentView('portfolio');
-    scrollToSection('work');
-
+    console.log("Portfolio view activated");
   };
 
+
+useEffect(() => {
+  if (currentView === 'portfolio') {
+    const timeout = setTimeout(() => {
+      scrollToSection('work');
+    }, 100); 
+
+    return () => clearTimeout(timeout);
+  }
+}, [currentView]);
 
   if (currentView === 'case-study') {
     return (

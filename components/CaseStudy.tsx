@@ -322,10 +322,7 @@ export function CaseStudy({ onBack, project }: CaseStudyProps) {
                     />
                   </div>
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300 rounded-xl flex items-center justify-center">
-                    <Button variant="secondary" className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Eye className="mr-2 h-4 w-4" />
-                      View Details
-                    </Button>
+                    
                   </div>
                 </div>
               </div>
@@ -401,7 +398,7 @@ export function CaseStudy({ onBack, project }: CaseStudyProps) {
               Let&s collaborate to create meaningful digital experiences that solve real problems and delight users.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
+              <Button onClick={onBack} size="lg">
                 Start a Project
               </Button>
               {project.liveUrl && (
