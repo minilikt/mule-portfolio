@@ -270,38 +270,6 @@ export function CaseStudy({ onBack, project, contact }: CaseStudyProps) {
           </div>
         </section>
 
-        {/* UI/UX Improvements */}
-        {project.improvements && project.improvements.length > 0 && (
-          <section className="mb-16">
-            <h2 className="text-3xl mb-8">UI/UX Improvements</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <h3 className="text-xl text-red-600 dark:text-red-400">Before</h3>
-                <div className="aspect-video bg-red-50 dark:bg-red-950/20 rounded-lg border-2 border-red-200 dark:border-red-800 flex items-center justify-center">
-                  <span className="text-muted-foreground">Previous Design Issues</span>
-                </div>
-              </div>
-              <div className="space-y-4">
-                <h3 className="text-xl text-green-600 dark:text-green-400">After</h3>
-                <div className="aspect-video bg-green-50 dark:bg-green-950/20 rounded-lg border-2 border-green-200 dark:border-green-800 flex items-center justify-center">
-                  <span className="text-muted-foreground">Improved Design</span>
-                </div>
-              </div>
-            </div>
-            <div className="mt-8">
-              <h3 className="text-lg mb-4">Key Improvements</h3>
-              <div className="grid md:grid-cols-2 gap-4">
-                {project.improvements.map((improvement, index) => (
-                  <div key={index} className="flex items-start p-4 bg-green-50/50 dark:bg-green-950/20 rounded-lg">
-                    <ArrowRight className="h-5 w-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="text-sm">{improvement}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
         {/* Final Design Showcase */}
         <section className="mb-16">
           <h2 className="text-3xl mb-8">Final Design Showcase</h2>

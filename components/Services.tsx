@@ -171,26 +171,31 @@ export function Services() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {servicesData.map((service) => {
             const Icon = service.icon;
+            // Responsive card rendering: show only icon and title on phones
             return (
-              <Card onMouseDown={() => handleLearnMore(service)} key={service.id} className="group hover:shadow-lg transition-all duration-300 h-full">
-                
+             <Card
+                onMouseDown={() => handleLearnMore(service)}
+                key={service.id}
+                className="group hover:shadow-lg transition-all duration-300 h-full"
+              >
                 <CardContent className="p-6 flex flex-col h-full">
-                  {/* Icon */}
-                  <div className="mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary/10 to-accent/20 rounded-lg flex items-center justify-center">
-                      <Icon className="h-6 w-6 text-primary" />
-                    </div>
+                  {/* Icon + Title container */}
+                  <div className="flex items-center mb-4 space-x-4 md:flex-col md:space-x-0 md:mb-6">
+                    {/* Icon */}
+                    <service.icon className="h-8 w-8 text-primary" />
+                    
+                    {/* Title */}
+                    <h3 className="text-xl m-0">{service.title}</h3>
                   </div>
 
-                  {/* Content */}
-                  <h3 className="text-xl mb-3">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed flex-grow">
+                  {/* Description — hidden on small screens */}
+                  <p className="text-muted-foreground mb-6 leading-relaxed flex-grow hidden md:block">
                     {service.shortDescription}
                   </p>
 
-                  {/* Features Preview */}
-                  <div className="mb-6">
-                    <h4 className="text-sm mb-3 text-muted-foreground">What&s Included:</h4>
+                  {/* Features — hidden on small screens */}
+                  <div className="mb-6 hidden md:block">
+                    <h4 className="text-sm mb-3 text-muted-foreground">What’s Included:</h4>
                     <ul className="space-y-2">
                       {service.features.slice(0, 4).map((feature) => (
                         <li key={feature} className="flex items-center text-sm">
@@ -206,10 +211,10 @@ export function Services() {
                     </ul>
                   </div>
 
-                  {/* CTA */}
-                  <div className="mt-auto">
-                    <Button 
-                      variant="outline" 
+                  {/* CTA button — hidden on small screens */}
+                  <div className="mt-auto hidden md:block">
+                    <Button
+                      variant="outline"
                       className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
                       onClick={() => handleLearnMore(service)}
                     >
@@ -218,6 +223,8 @@ export function Services() {
                   </div>
                 </CardContent>
               </Card>
+
+
             );
           })}
         </div>
@@ -234,6 +241,7 @@ export function Services() {
           </Card>
         </div>
       </div>
+
 
       <ServiceModal 
         isOpen={isModalOpen}

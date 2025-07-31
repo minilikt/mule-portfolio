@@ -17,11 +17,11 @@ export function About() {
                 and user-centered. My approach combines deep user research with modern design 
                 principles to deliver solutions that drive business results.
               </p>
-              <p>
+                <p className="hidden sm:block">
                 I&apos;ve had the privilege of working with startups and established companies 
                 across various industries, from fintech to healthcare, helping them transform 
                 complex problems into simple, elegant solutions.
-              </p>
+                </p>
               <p>
                 When I&apos;m not designing, you can find me exploring the latest design trends, 
                 contributing to open-source projects, or exploring the beautiful landscapes of Ethiopia.

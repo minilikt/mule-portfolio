@@ -3,7 +3,16 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { Badge } from "./ui/badge";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Send, ArrowDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import Link from "next/link";
 
 export function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
@@ -89,8 +98,10 @@ ${message}
                 <div className="mt-8">
                   <h4 className="mb-4">Follow Me</h4>
                   <div className="flex space-x-3">
-                    <Button variant="outline" size="icon">
-                      <Linkedin className="h-4 w-4" />
+                    <Button  variant="outline" size="icon">
+                      <Link href="https://www.linkedin.com/in/abraham-mulugeta-41605b378?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                        <Linkedin className="h-4 w-4" />
+                      </Link>
                     </Button>
                     <Button variant="outline" size="icon">
                       <Twitter className="h-4 w-4" />
@@ -133,6 +144,22 @@ ${message}
                     <label htmlFor="company" className="block mb-2">Company</label>
                     <Input id="company" name="company" placeholder="Your company name" />
                   </div>
+                    <label htmlFor="preference" className="block mb-2">Preference</label>
+                    <div className="ml-4 flex flex-row mt-2 ">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger className="flex items-center gap-2 px-4 py-2 border rounded-md bg-background hover:bg-muted transition-colors">
+                        Inquires
+                        <ArrowDown className="h-4 w-4 text-muted-foreground" />
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent>
+                        <DropdownMenuItem>Project work</DropdownMenuItem>
+                        <DropdownMenuItem>Collaboration</DropdownMenuItem>
+                        <DropdownMenuItem>Consultation</DropdownMenuItem>
+                        <DropdownMenuItem>Other</DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                    </div>
+                  
                   
                   <div>
                     <label htmlFor="message" className="block mb-2">Project Details *</label>

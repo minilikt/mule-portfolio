@@ -54,18 +54,7 @@ export function Portfolio({ onViewCaseStudy }: PortfolioProps) {
                     />
                   </div>
                   
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <Button 
-                      variant="secondary" 
-                      size="lg" 
-                      className="bg-white/90 hover:bg-white"
-                      onClick={() => handleViewCaseStudy(project)}
-                    >
-                      <Eye className="mr-2 h-4 w-4" />
-                      View Case Study
-                    </Button>
-                  </div>
+                  
 
                   {/* Project Number */}
                   <div className="absolute top-6 left-6">
@@ -134,9 +123,7 @@ export function Portfolio({ onViewCaseStudy }: PortfolioProps) {
                       View Case Study
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
-                    <Button variant="ghost" size="icon">
-                      <ExternalLink className="h-4 w-4" />
-                    </Button>
+                    
                   </div>
                 </CardContent>
               </div>
@@ -144,15 +131,7 @@ export function Portfolio({ onViewCaseStudy }: PortfolioProps) {
           ))}
         </div>
         
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
-            Interested in seeing more work or case studies?
-          </p>
-          <Button variant="outline" size="lg">
-            View Complete Portfolio
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
-        </div>
+        
       </div>
     </section>
   );

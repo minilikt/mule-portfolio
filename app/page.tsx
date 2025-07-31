@@ -10,8 +10,10 @@ import { Services } from "@/components/Services";
 import { Skills } from "@/components/Skills";
 import { Testimonials } from "@/components/Testimonials";
 import { ThemeToggle } from "@/components/ThemeToggle";
+import { Button } from "@/components/ui/button";
 import { WorkProcess } from "@/components/WorkProcess";
 import { sampleProject } from "@/constants/const";
+import { ArrowUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 
@@ -44,7 +46,7 @@ export default function Home() {
   };
 
   useEffect(() => {
-    if (currentView === 'portfolio') {
+    if (currentView !== 'case-study') return;
       const timeout = setTimeout(() => {
         if (backTarget === "back") {
           scrollToSection('work');
@@ -54,7 +56,7 @@ export default function Home() {
       }, 100);
 
       return () => clearTimeout(timeout);
-    }
+    
   }, [currentView, backTarget]);
 
   if (currentView === 'case-study') {
@@ -67,6 +69,13 @@ export default function Home() {
     <div className="min-h-screen bg-background">
       <ThemeToggle />
       <Header />
+      <Button
+        className="fixed bottom-6 right-6 z-50 rounded-full p-3 shadow-lg bg-primary  hover:bg-primary/80 transition"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Scroll to top"
+      >
+        <ArrowUp className="h-5 w-5" />
+      </Button>
       <main>
         <Hero />
         <About />
@@ -75,6 +84,7 @@ export default function Home() {
         <Portfolio onViewCaseStudy={showCaseStudy} />
         <Skills />
         <Testimonials />
+        
         <Contact />
       </main>
       <Footer />

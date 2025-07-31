@@ -1,18 +1,9 @@
 import { Users, Search, Palette, Rocket } from "lucide-react";
 
 export const testimonials = [
+
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "Product Manager",
-    company: "TechFlow Inc.",
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b602?w=100&h=100&fit=crop&crop=face",
-    rating: 5,
-    text: "Abraham transformed our complex fintech platform into an intuitive experience that our users absolutely love. The attention to detail and user research was exceptional. Our user engagement increased by 45% after the redesign.",
-    project: "Banking App Redesign"
-  },
-  {
-    id: 2,
     name: "Michael Chen",
     position: "CEO",
     company: "HealthConnect",
@@ -22,17 +13,7 @@ export const testimonials = [
     project: "Healthcare Platform"
   },
   {
-    id: 3,
-    name: "Emma Rodriguez",
-    position: "Marketing Director",
-    company: "EcoShop",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
-    rating: 5,
-    text: "Abraham's redesign of our e-commerce platform exceeded all expectations. The conversion rate improved by 60%, and customer feedback has been overwhelmingly positive. Professional, creative, and results-driven.",
-    project: "E-commerce Redesign"
-  },
-  {
-    id: 4,
+    id: 2,
     name: "David Kim",
     position: "Founder",
     company: "LearnSpace",
@@ -42,17 +23,7 @@ export const testimonials = [
     project: "Educational Platform"
   },
   {
-    id: 5,
-    name: "Lisa Wang",
-    position: "VP of Design",
-    company: "StartupFlow",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop&crop=face",
-    rating: 5,
-    text: "Abraham brought fresh perspectives to our design challenges. The user research insights were invaluable, and the final designs perfectly balanced user needs with business objectives. A true professional.",
-    project: "SaaS Dashboard"
-  },
-  {
-    id: 6,
+    id: 3,
     name: "James Thompson",
     position: "CTO",
     company: "InnovateLab",
