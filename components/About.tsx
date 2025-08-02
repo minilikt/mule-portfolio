@@ -32,7 +32,7 @@ export function About() {
           <div className="relative">
             <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/10">
               <Image
-                src="/mule.jpg"
+                src="/port/mule.png"
                 alt="Abraham Mulugeta"
                 width={400}
                 height={400}
