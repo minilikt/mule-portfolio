@@ -1,6 +1,7 @@
 import { ArrowDown, Download } from "lucide-react";
 import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export function Hero() {
   const scrollToWork = () => {
@@ -35,10 +36,12 @@ export function Hero() {
             View My Work
             <ArrowDown className="ml-2 h-4 w-4" />
           </Button>
+            <Link href="/pdf/cv.pdf" download>
           <Button variant="outline" size="lg">
             <Download className="mr-2 h-4 w-4" />
-            Download Resume
+              Download Resume
           </Button>
+            </Link>
         </div>
 
         {/* Stats */}
